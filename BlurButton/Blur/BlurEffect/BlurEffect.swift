@@ -20,30 +20,30 @@ class BlurEffect {
     
     var isOn: Bool!
     
-    init(effect: UIBlurEffectStyle, color: UIColor = .black, alphaBlur: Double = 1, alphaColor: Double = 0.3) {
+    init(effect: UIBlurEffectStyle, color: UIColor = .black, alphaBlur: Double = 1, alphaColor: Double = 0) {
         
         self.isOn = false
         
         self.color = color
         
-        self.alphaBlur = 1
+        self.alphaBlur = alphaBlur
         
-        self.alphaColor = 0.3
+        self.alphaColor = alphaColor
         
         self.blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: effect))
         
         self.blurEffectView.autoresizingMask = [.flexibleTopMargin, .flexibleRightMargin]
     }
     
-    init(effect: UIBlurEffectStyle, viewToPresent: UIView, sendToBack: Bool = true, color: UIColor = .black, alphaBlur: Double = 1, alphaColor: Double = 0.3) {
+    init(effect: UIBlurEffectStyle, viewToPresent: UIView, sendToBack: Bool = true, color: UIColor = .black, alphaBlur: Double = 1, alphaColor: Double = 0) {
         
         self.isOn = true
         
         self.color = color
         
-        self.alphaBlur = 1
+        self.alphaBlur = alphaBlur
         
-        self.alphaColor = 0.3
+        self.alphaColor = alphaColor
         
         self.blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: effect))
         
